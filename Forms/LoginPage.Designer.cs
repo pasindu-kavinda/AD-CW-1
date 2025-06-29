@@ -50,6 +50,7 @@
             this.txtEmail.TabIndex = 0;
             this.txtEmail.Text = "";
             this.txtEmail.TrailingIcon = null;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
             // 
             // txtPassword
             // 
@@ -69,10 +70,12 @@
             this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "";
             this.txtPassword.TrailingIcon = null;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // btnLogin
             // 
             this.btnLogin.AutoSize = false;
+            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnLogin.Depth = 0;
             this.btnLogin.HighEmphasis = true;

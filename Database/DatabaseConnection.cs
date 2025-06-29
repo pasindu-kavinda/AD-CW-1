@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using MySql.Data.MySqlClient;
 
 
@@ -15,7 +16,17 @@ namespace AD_CW_1.Database
 
         public static MySqlConnection GetConnection()
         {
-            return new MySqlConnection(connectionString);
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connectionString);
+                conn.Open();
+                return conn;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message, "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return null;
+            }
         }
     }
 }

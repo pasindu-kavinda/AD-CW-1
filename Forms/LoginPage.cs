@@ -27,6 +27,11 @@ namespace AD_CW_1.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            login(sender, e);
+        }
+
+        private void login(object sender, EventArgs e)
+        {
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
@@ -34,7 +39,7 @@ namespace AD_CW_1.Forms
                 MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             if (email == "admin" && password == "password")
             {
                 loginSuccess(sender, e);
@@ -51,6 +56,24 @@ namespace AD_CW_1.Forms
             DashboardPage dashboardPage = new DashboardPage();
             dashboardPage.Show();
             this.Hide();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                login(sender, e);
+            }
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                login(sender, e);
+            }
         }
     }
 }
