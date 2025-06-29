@@ -36,12 +36,12 @@ namespace AD_CW_1.Forms.Customer
                 CustomerRepository customerRepository = new CustomerRepository();
                 customerRepository.AddCustomer(new Models.Customer
                 {
-                    CustomerNumber = "dgdsgdsg",
+                    CustomerNumber = txtCustomerNumber.Text,
                     Name = txtCustomerName.Text,
-                    Address = "dbvsbfbdfb",
-                    Phone = "454545345",
-                    Email = "fdhdfh",
-                    Password = "fdhdfhdfh",
+                    Address = txtCustomerAddress.Text,
+                    Phone = txtCustomerPhone.Text,
+                    Email = txtCustomerEmail.Text,
+                    Password = txtCustomerPassword.Text,
                     CreatedDate = DateTime.Now
                 });
                 MessageBox.Show("Customer Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
