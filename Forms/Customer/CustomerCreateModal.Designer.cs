@@ -163,7 +163,6 @@
             this.txtCustomerAddress.Location = new System.Drawing.Point(29, 271);
             this.txtCustomerAddress.MaxLength = 50;
             this.txtCustomerAddress.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtCustomerAddress.Multiline = false;
             this.txtCustomerAddress.Name = "txtCustomerAddress";
             this.txtCustomerAddress.Size = new System.Drawing.Size(609, 50);
             this.txtCustomerAddress.TabIndex = 7;

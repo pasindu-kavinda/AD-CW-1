@@ -30,6 +30,16 @@ namespace AD_CW_1
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
 
+            InitializeDashboardTab();
+            InitializedCustomersTab();
+
+
+        }
+
+
+        #region DashboardTab
+        private void InitializeDashboardTab()
+        {
             //Bar Chart
             cartesianChart1.Series = new SeriesCollection
             {
@@ -93,12 +103,16 @@ namespace AD_CW_1
             });
 
             cartesianChart2.LegendLocation = LegendLocation.None;
-
-            LoadCustomers();
-
         }
+        #endregion
 
-        // Customer
+
+        #region CustomerTab
+        private void InitializedCustomersTab()
+        {
+            LoadCustomers();
+            addCustomerContextMenu();
+        }
         private void LoadCustomers()
         {
             var customers = customerRepository.GetAllCustomers();
@@ -116,6 +130,23 @@ namespace AD_CW_1
             }
         }
 
+        private void addCustomerContextMenu()
+        {
+            ContextMenuStrip contextMenu = new ContextMenuStrip();
+
+            ToolStripMenuItem editItem = new ToolStripMenuItem("Edit Customer");
+            editItem.Click += EditCustomer_Click;
+            contextMenu.Items.Add(editItem);
+
+            ToolStripMenuItem deleteItem = new ToolStripMenuItem("Delete Customer");
+            deleteItem.Click += DeleteCustomer_Click;
+            contextMenu.Items.Add(deleteItem);
+
+            contextMenu.Items.Add(new ToolStripSeparator());
+
+            customersListView.ContextMenuStrip = contextMenu;
+        }
+
         private void btnCreateCustomer_Click(object sender, EventArgs e)
         {
             CustomerCreateModal customerCreateModal = new CustomerCreateModal();
@@ -123,5 +154,64 @@ namespace AD_CW_1
 
             LoadCustomers();
         }
+
+        private void EditCustomer_Click(object sender, EventArgs e)
+        {
+            if (customersListView.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = customersListView.SelectedItems[0];
+                int customerId = int.Parse(selectedItem.Text);
+
+                MessageBox.Show("Customer updated successfully!" + customerId, "Success");
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer to edit.", "No Selection");
+            }
+        }
+
+        private void DeleteCustomer_Click(object sender, EventArgs e)
+        {
+            if (customersListView.SelectedItems.Count > 0)
+            {
+                ListViewItem selectedItem = customersListView.SelectedItems[0];
+                int customerId = int.Parse(selectedItem.Text);
+                string customerName = selectedItem.SubItems[1].Text;
+
+                DialogResult result = MessageBox.Show(
+                    $"Are you sure you want to delete customer '{customerName}'?\n\nThis action cannot be undone.",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        CustomerRepository customerRepository = new CustomerRepository();
+                        bool deleted = customerRepository.DeleteCustomer(customerId);
+
+                        if (deleted)
+                        {
+                            LoadCustomers();
+                            MessageBox.Show("Customer deleted successfully!", "Success");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete customer.", "Error");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error deleting customer: {ex.Message}", "Error");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer to delete.", "No Selection");
+            }
+        }
+        #endregion
     }
 }
