@@ -33,6 +33,7 @@
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.dashboardTab = new System.Windows.Forms.TabPage();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            this.label11 = new System.Windows.Forms.Label();
             this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.materialProgressBar3 = new MaterialSkin.Controls.MaterialProgressBar();
@@ -55,16 +56,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.customersTab = new System.Windows.Forms.TabPage();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnCreateCustomer = new MaterialSkin.Controls.MaterialButton();
+            this.label12 = new System.Windows.Forms.Label();
             this.customersListView = new MaterialSkin.Controls.MaterialListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CustomerNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnCreateCustomer = new MaterialSkin.Controls.MaterialButton();
-            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.createdDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.dashboardTab.SuspendLayout();
@@ -107,7 +107,6 @@
             this.dashboardTab.TabIndex = 0;
             this.dashboardTab.Text = "Dashboard";
             this.dashboardTab.UseVisualStyleBackColor = true;
-            this.dashboardTab.Click += new System.EventHandler(this.Dashboard_Click);
             // 
             // materialCard5
             // 
@@ -123,6 +122,16 @@
             this.materialCard5.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard5.Size = new System.Drawing.Size(522, 415);
             this.materialCard5.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(17, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(265, 29);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Transport Units by Year";
             // 
             // cartesianChart2
             // 
@@ -371,15 +380,35 @@
             this.customersTab.Text = "Customers";
             this.customersTab.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // btnCreateCustomer
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(17, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(265, 29);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Transport Units by Year";
+            this.btnCreateCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCreateCustomer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCreateCustomer.Depth = 0;
+            this.btnCreateCustomer.HighEmphasis = true;
+            this.btnCreateCustomer.Icon = null;
+            this.btnCreateCustomer.Location = new System.Drawing.Point(1140, 16);
+            this.btnCreateCustomer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCreateCustomer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCreateCustomer.Name = "btnCreateCustomer";
+            this.btnCreateCustomer.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCreateCustomer.Size = new System.Drawing.Size(76, 36);
+            this.btnCreateCustomer.TabIndex = 2;
+            this.btnCreateCustomer.Text = "Create";
+            this.btnCreateCustomer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCreateCustomer.UseAccentColor = false;
+            this.btnCreateCustomer.UseVisualStyleBackColor = true;
+            this.btnCreateCustomer.Click += new System.EventHandler(this.btnCreateCustomer_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(23, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(129, 29);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Customers";
             // 
             // customersListView
             // 
@@ -408,6 +437,10 @@
             this.customersListView.UseCompatibleStateImageBehavior = false;
             this.customersListView.View = System.Windows.Forms.View.Details;
             // 
+            // id
+            // 
+            this.id.Text = "Id";
+            // 
             // CustomerName
             // 
             this.CustomerName.Text = "Name";
@@ -418,60 +451,27 @@
             this.CustomerNumber.Text = "Number ";
             this.CustomerNumber.Width = 100;
             // 
-            // label12
+            // email
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 29);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Customers";
-            // 
-            // btnCreateCustomer
-            // 
-            this.btnCreateCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCreateCustomer.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCreateCustomer.Depth = 0;
-            this.btnCreateCustomer.HighEmphasis = true;
-            this.btnCreateCustomer.Icon = null;
-            this.btnCreateCustomer.Location = new System.Drawing.Point(1140, 16);
-            this.btnCreateCustomer.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCreateCustomer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCreateCustomer.Name = "btnCreateCustomer";
-            this.btnCreateCustomer.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCreateCustomer.Size = new System.Drawing.Size(76, 36);
-            this.btnCreateCustomer.TabIndex = 2;
-            this.btnCreateCustomer.Text = "Create";
-            this.btnCreateCustomer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnCreateCustomer.UseAccentColor = false;
-            this.btnCreateCustomer.UseVisualStyleBackColor = true;
-            // 
-            // address
-            // 
-            this.address.Text = "Address";
-            this.address.Width = 120;
+            this.email.Text = "Email";
+            this.email.Width = 150;
             // 
             // phone
             // 
             this.phone.Text = "Phone";
             this.phone.Width = 100;
             // 
-            // email
+            // address
             // 
-            this.email.Text = "Email";
-            this.email.Width = 150;
-            // 
-            // id
-            // 
-            this.id.Text = "Id";
+            this.address.Text = "Address";
+            this.address.Width = 120;
             // 
             // createdDate
             // 
             this.createdDate.Text = "Created Date";
             this.createdDate.Width = 150;
             // 
-            // Form1
+            // DashboardPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -479,11 +479,10 @@
             this.Controls.Add(this.materialTabControl1);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl1;
-            this.Name = "Form1";
+            this.Name = "DashboardPage";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " E-Shift Household Goods";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.dashboardTab.ResumeLayout(false);
             this.materialCard5.ResumeLayout(false);

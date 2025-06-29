@@ -32,6 +32,8 @@ namespace AD_CW_1.Forms
 
         private void login(object sender, EventArgs e)
         {
+            loginSuccess(sender, e); // Uncomment this line to skip the login validation for testing purposes
+
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))

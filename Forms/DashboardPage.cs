@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AD_CW_1.Repositories;
+using AD_CW_1.Forms.Customer;
 
 namespace AD_CW_1
 {
@@ -94,18 +95,10 @@ namespace AD_CW_1
             cartesianChart2.LegendLocation = LegendLocation.None;
 
             LoadCustomers();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //customersListView.
-        }
-
-        private void Dashboard_Click(object sender, EventArgs e)
-        {
 
         }
 
+        // Customer
         private void LoadCustomers()
         {
             var customers = customerRepository.GetAllCustomers();
@@ -123,5 +116,10 @@ namespace AD_CW_1
             }
         }
 
+        private void btnCreateCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerCreateModal customerCreateModal = new CustomerCreateModal();
+            customerCreateModal.ShowDialog();
+        }
     }
 }
