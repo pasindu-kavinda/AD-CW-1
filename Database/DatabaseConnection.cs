@@ -19,7 +19,6 @@ namespace AD_CW_1.Database
             try
             {
                 MySqlConnection conn = new MySqlConnection(connectionString);
-                conn.Open();
                 return conn;
             }
             catch (Exception ex)
