@@ -1,6 +1,6 @@
 ﻿namespace AD_CW_1
 {
-    partial class Form1
+    partial class DashboardPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardPage));
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.dashboardTab = new System.Windows.Forms.TabPage();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
@@ -56,11 +56,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.customersTab = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.customersListView = new MaterialSkin.Controls.MaterialListView();
             this.CustomerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CustomerNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label12 = new System.Windows.Forms.Label();
             this.btnCreateCustomer = new MaterialSkin.Controls.MaterialButton();
+            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.createdDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabControl1.SuspendLayout();
             this.dashboardTab.SuspendLayout();
             this.materialCard5.SuspendLayout();
@@ -356,7 +361,7 @@
             // 
             this.customersTab.Controls.Add(this.btnCreateCustomer);
             this.customersTab.Controls.Add(this.label12);
-            this.customersTab.Controls.Add(this.materialListView1);
+            this.customersTab.Controls.Add(this.customersListView);
             this.customersTab.ImageKey = "icons8-report-48.png";
             this.customersTab.Location = new System.Drawing.Point(4, 31);
             this.customersTab.Name = "customersTab";
@@ -376,27 +381,32 @@
             this.label11.TabIndex = 5;
             this.label11.Text = "Transport Units by Year";
             // 
-            // materialListView1
+            // customersListView
             // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.customersListView.AutoSizeTable = false;
+            this.customersListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.customersListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.customersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
             this.CustomerName,
-            this.CustomerNumber});
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(28, 76);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1188, 576);
-            this.materialListView1.TabIndex = 0;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.CustomerNumber,
+            this.email,
+            this.phone,
+            this.address,
+            this.createdDate});
+            this.customersListView.Depth = 0;
+            this.customersListView.FullRowSelect = true;
+            this.customersListView.HideSelection = false;
+            this.customersListView.Location = new System.Drawing.Point(28, 76);
+            this.customersListView.MinimumSize = new System.Drawing.Size(200, 100);
+            this.customersListView.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.customersListView.MouseState = MaterialSkin.MouseState.OUT;
+            this.customersListView.Name = "customersListView";
+            this.customersListView.OwnerDraw = true;
+            this.customersListView.Size = new System.Drawing.Size(1188, 576);
+            this.customersListView.TabIndex = 0;
+            this.customersListView.UseCompatibleStateImageBehavior = false;
+            this.customersListView.View = System.Windows.Forms.View.Details;
             // 
             // CustomerName
             // 
@@ -436,6 +446,30 @@
             this.btnCreateCustomer.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnCreateCustomer.UseAccentColor = false;
             this.btnCreateCustomer.UseVisualStyleBackColor = true;
+            // 
+            // address
+            // 
+            this.address.Text = "Address";
+            this.address.Width = 120;
+            // 
+            // phone
+            // 
+            this.phone.Text = "Phone";
+            this.phone.Width = 100;
+            // 
+            // email
+            // 
+            this.email.Text = "Email";
+            this.email.Width = 150;
+            // 
+            // id
+            // 
+            this.id.Text = "Id";
+            // 
+            // createdDate
+            // 
+            this.createdDate.Text = "Created Date";
+            this.createdDate.Width = 150;
             // 
             // Form1
             // 
@@ -496,11 +530,16 @@
         private LiveCharts.WinForms.CartesianChart cartesianChart2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private MaterialSkin.Controls.MaterialListView customersListView;
         private System.Windows.Forms.ColumnHeader CustomerName;
         private System.Windows.Forms.ColumnHeader CustomerNumber;
         private System.Windows.Forms.Label label12;
         private MaterialSkin.Controls.MaterialButton btnCreateCustomer;
+        private System.Windows.Forms.ColumnHeader address;
+        private System.Windows.Forms.ColumnHeader phone;
+        private System.Windows.Forms.ColumnHeader email;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader createdDate;
     }
 }
 

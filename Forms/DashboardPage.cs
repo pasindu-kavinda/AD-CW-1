@@ -11,14 +11,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AD_CW_1.Repositories;
 
 namespace AD_CW_1
 {
-    public partial class Form1: MaterialForm
+    public partial class DashboardPage: MaterialForm
     {
-        public Form1()
+        private CustomerRepository customerRepository;
+
+        public DashboardPage()
         {
             InitializeComponent();
+            customerRepository = new CustomerRepository();
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -88,16 +93,35 @@ namespace AD_CW_1
 
             cartesianChart2.LegendLocation = LegendLocation.None;
 
+            LoadCustomers();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //customersListView.
         }
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void LoadCustomers()
+        {
+            var customers = customerRepository.GetAllCustomers();
+            customersListView.Items.Clear();
+            foreach (var customer in customers)
+            {
+                var item = new ListViewItem(customer.Id.ToString());
+                item.SubItems.Add(customer.Name);
+                item.SubItems.Add(customer.CustomerNumber);
+                item.SubItems.Add(customer.Email);
+                item.SubItems.Add(customer.Phone);
+                item.SubItems.Add(customer.Address);
+                item.SubItems.Add(customer.CreatedDate.ToString("yyyy-MM-dd"));
+                customersListView.Items.Add(item);
+            }
+        }
+
     }
 }
