@@ -424,6 +424,7 @@
             this.address,
             this.createdDate});
             this.customersListView.Depth = 0;
+            this.customersListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.customersListView.FullRowSelect = true;
             this.customersListView.HideSelection = false;
             this.customersListView.Location = new System.Drawing.Point(28, 76);

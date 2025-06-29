@@ -46,7 +46,7 @@
             this.btnSave.Depth = 0;
             this.btnSave.HighEmphasis = true;
             this.btnSave.Icon = null;
-            this.btnSave.Location = new System.Drawing.Point(574, 550);
+            this.btnSave.Location = new System.Drawing.Point(574, 531);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSave.Name = "btnSave";
@@ -67,7 +67,7 @@
             this.btnCancel.Depth = 0;
             this.btnCancel.HighEmphasis = true;
             this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(464, 550);
+            this.btnCancel.Location = new System.Drawing.Point(464, 531);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
@@ -103,7 +103,7 @@
             this.txtCustomerNumber.AnimateReadOnly = false;
             this.txtCustomerNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomerNumber.Depth = 0;
-            this.txtCustomerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCustomerNumber.Hint = "Customer Number";
             this.txtCustomerNumber.LeadingIcon = null;
             this.txtCustomerNumber.Location = new System.Drawing.Point(350, 101);
@@ -121,10 +121,10 @@
             this.txtCustomerEmail.AnimateReadOnly = false;
             this.txtCustomerEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomerEmail.Depth = 0;
-            this.txtCustomerEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCustomerEmail.Hint = "Customer Email";
             this.txtCustomerEmail.LeadingIcon = null;
-            this.txtCustomerEmail.Location = new System.Drawing.Point(29, 175);
+            this.txtCustomerEmail.Location = new System.Drawing.Point(29, 184);
             this.txtCustomerEmail.MaxLength = 50;
             this.txtCustomerEmail.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCustomerEmail.Multiline = false;
@@ -139,10 +139,10 @@
             this.txtCustomerPhone.AnimateReadOnly = false;
             this.txtCustomerPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomerPhone.Depth = 0;
-            this.txtCustomerPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerPhone.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCustomerPhone.Hint = "Customer Phone";
             this.txtCustomerPhone.LeadingIcon = null;
-            this.txtCustomerPhone.Location = new System.Drawing.Point(350, 175);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(350, 184);
             this.txtCustomerPhone.MaxLength = 50;
             this.txtCustomerPhone.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCustomerPhone.Multiline = false;
@@ -157,10 +157,10 @@
             this.txtCustomerAddress.AnimateReadOnly = false;
             this.txtCustomerAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomerAddress.Depth = 0;
-            this.txtCustomerAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerAddress.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCustomerAddress.Hint = "Customer Address";
             this.txtCustomerAddress.LeadingIcon = null;
-            this.txtCustomerAddress.Location = new System.Drawing.Point(29, 264);
+            this.txtCustomerAddress.Location = new System.Drawing.Point(29, 271);
             this.txtCustomerAddress.MaxLength = 50;
             this.txtCustomerAddress.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCustomerAddress.Multiline = false;
@@ -175,7 +175,7 @@
             this.txtCustomerPassword.AnimateReadOnly = false;
             this.txtCustomerPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomerPassword.Depth = 0;
-            this.txtCustomerPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCustomerPassword.Hint = "Customer Password";
             this.txtCustomerPassword.LeadingIcon = null;
             this.txtCustomerPassword.Location = new System.Drawing.Point(29, 354);
@@ -193,7 +193,7 @@
             this.txtCustomerConfirmPassword.AnimateReadOnly = false;
             this.txtCustomerConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomerConfirmPassword.Depth = 0;
-            this.txtCustomerConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerConfirmPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCustomerConfirmPassword.Hint = "Customer Confirm Password";
             this.txtCustomerConfirmPassword.LeadingIcon = null;
             this.txtCustomerConfirmPassword.Location = new System.Drawing.Point(350, 354);

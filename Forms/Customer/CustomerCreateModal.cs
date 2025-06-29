@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace AD_CW_1.Forms.Customer
 {
-    public partial class CustomerCreateModal: MaterialForm
+    public partial class CustomerCreateModal : MaterialForm
     {
         public CustomerCreateModal()
         {
@@ -31,12 +31,12 @@ namespace AD_CW_1.Forms.Customer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtCustomerEmail.Text == string.Empty ||
-               txtCustomerName.Text == string.Empty ||
-               txtCustomerNumber.Text == string.Empty ||
-               txtCustomerAddress.Text == string.Empty ||
-               txtCustomerPhone.Text == string.Empty ||
-               txtCustomerPassword.Text == string.Empty)
+            if (string.IsNullOrWhiteSpace(txtCustomerEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtCustomerName.Text) ||
+                string.IsNullOrWhiteSpace(txtCustomerNumber.Text) ||
+                string.IsNullOrWhiteSpace(txtCustomerAddress.Text) ||
+                string.IsNullOrWhiteSpace(txtCustomerPhone.Text) ||
+                string.IsNullOrWhiteSpace(txtCustomerPassword.Text))
             {
                 MessageBox.Show("Please fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -63,7 +63,7 @@ namespace AD_CW_1.Forms.Customer
             try
             {
                 CustomerRepository customerRepository = new CustomerRepository();
-                customerRepository.AddCustomer(new Models.Customer
+                bool success = customerRepository.AddCustomer(new Models.Customer
                 {
                     CustomerNumber = txtCustomerNumber.Text,
                     Name = txtCustomerName.Text,
@@ -74,10 +74,17 @@ namespace AD_CW_1.Forms.Customer
                     CreatedDate = DateTime.Now
                 });
 
-                MessageBox.Show("Customer Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
+                if (success)
+                {
+                    MessageBox.Show("Customer Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to create customer. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while creating the customer. Please try again." + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
