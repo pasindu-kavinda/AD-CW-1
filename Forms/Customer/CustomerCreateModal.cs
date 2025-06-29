@@ -31,6 +31,35 @@ namespace AD_CW_1.Forms.Customer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(txtCustomerEmail.Text == string.Empty ||
+               txtCustomerName.Text == string.Empty ||
+               txtCustomerNumber.Text == string.Empty ||
+               txtCustomerAddress.Text == string.Empty ||
+               txtCustomerPhone.Text == string.Empty ||
+               txtCustomerPassword.Text == string.Empty)
+            {
+                MessageBox.Show("Please fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!txtCustomerEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Please enter a valid email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtCustomerPassword.Text.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtCustomerPassword.Text != txtCustomerConfirmPassword.Text)
+            {
+                MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 CustomerRepository customerRepository = new CustomerRepository();
@@ -44,6 +73,7 @@ namespace AD_CW_1.Forms.Customer
                     Password = txtCustomerPassword.Text,
                     CreatedDate = DateTime.Now
                 });
+
                 MessageBox.Show("Customer Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }

@@ -225,7 +225,7 @@
             this.Name = "CustomerCreateModal";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "CustomerCreateModal";
+            this.Text = "Customer Create";
             this.ResumeLayout(false);
             this.PerformLayout();
 

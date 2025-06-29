@@ -128,9 +128,7 @@ namespace AD_CW_1.Repositories
             }
             catch (Exception ex)
             {
-                // Log error
                 throw;
-                //return false;
             }
         }
 
@@ -157,8 +155,7 @@ namespace AD_CW_1.Repositories
             }
             catch (Exception ex)
             {
-                // Log error
-                return false;
+                throw;
             }
         }
 
@@ -179,8 +176,7 @@ namespace AD_CW_1.Repositories
             }
             catch (Exception ex)
             {
-                // Log error
-                return false;
+                throw;
             }
         }
     }
