@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using AD_CW_1.Repositories;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,26 @@ namespace AD_CW_1.Forms.Customer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Customer Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
+            try
+            {
+                CustomerRepository customerRepository = new CustomerRepository();
+                customerRepository.AddCustomer(new Models.Customer
+                {
+                    CustomerNumber = "dgdsgdsg",
+                    Name = txtCustomerName.Text,
+                    Address = "dbvsbfbdfb",
+                    Phone = "454545345",
+                    Email = "fdhdfh",
+                    Password = "fdhdfhdfh",
+                    CreatedDate = DateTime.Now
+                });
+                MessageBox.Show("Customer Created Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("An error occurred while creating the customer. Please try again." + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

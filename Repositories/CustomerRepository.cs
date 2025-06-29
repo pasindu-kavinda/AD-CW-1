@@ -129,7 +129,8 @@ namespace AD_CW_1.Repositories
             catch (Exception ex)
             {
                 // Log error
-                return false;
+                throw;
+                //return false;
             }
         }
 

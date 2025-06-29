@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new MaterialSkin.Controls.MaterialButton();
             this.btnCancel = new MaterialSkin.Controls.MaterialButton();
+            this.txtCustomerName = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(134, 182);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CustomerCreateModal";
             // 
             // btnSave
             // 
@@ -54,7 +45,7 @@
             this.btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSave.Name = "btnSave";
             this.btnSave.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSave.Size = new System.Drawing.Size(77, 36);
+            this.btnSave.Size = new System.Drawing.Size(64, 36);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -83,14 +74,32 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.AnimateReadOnly = false;
+            this.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomerName.Depth = 0;
+            this.txtCustomerName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCustomerName.Hint = "Customer Name";
+            this.txtCustomerName.LeadingIcon = null;
+            this.txtCustomerName.Location = new System.Drawing.Point(57, 100);
+            this.txtCustomerName.MaxLength = 50;
+            this.txtCustomerName.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCustomerName.Multiline = false;
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(288, 50);
+            this.txtCustomerName.TabIndex = 3;
+            this.txtCustomerName.Text = "";
+            this.txtCustomerName.TrailingIcon = null;
+            // 
             // CustomerCreateModal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 450);
+            this.ClientSize = new System.Drawing.Size(701, 618);
+            this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CustomerCreateModal";
@@ -103,9 +112,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialButton btnSave;
         private MaterialSkin.Controls.MaterialButton btnCancel;
+        private MaterialSkin.Controls.MaterialTextBox txtCustomerName;
     }
 }

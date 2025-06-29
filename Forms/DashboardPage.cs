@@ -120,6 +120,9 @@ namespace AD_CW_1
         {
             CustomerCreateModal customerCreateModal = new CustomerCreateModal();
             customerCreateModal.ShowDialog();
+
+            MessageBox.Show("Done", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadCustomers();
         }
     }
 }
