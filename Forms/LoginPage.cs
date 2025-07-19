@@ -1,9 +1,16 @@
-﻿using MaterialSkin;
+﻿using AD_CW_1.Business.Interface;
+using AD_CW_1.Business.Services;
+using AD_CW_1.Helpers;
+using AD_CW_1.Models;
+using AD_CW_1.Repositories.Interface;
+using AD_CW_1.Repositories.Services;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,15 +21,16 @@ namespace AD_CW_1.Forms
 {
     public partial class LoginPage: MaterialForm
     {
+        private readonly IUserService _userService;
+
         public LoginPage()
         {
             InitializeComponent();
 
             var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.DeepOrange700, TextShade.WHITE);
-
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue700, Primary.Blue900, Primary.Blue700, Accent.Blue700, TextShade.WHITE);
+            IUserRepository userRepository = new UserRepository();
+            _userService = new UserService(userRepository);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -32,19 +40,27 @@ namespace AD_CW_1.Forms
 
         private void login(object sender, EventArgs e)
         {
-            loginSuccess(sender, e); // Uncomment this line to skip the login validation for testing purposes
-
-            string email = txtEmail.Text.Trim();
+            string username = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (email == "admin" && password == "password")
+            UserModel user = _userService.GetUserByUsername(username);
+
+            if (user == null) {
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Debug.WriteLine($"User: {user?.Username}, Password: {user?.Password}");
+            if (PasswordHelper.VerifyPassword(password, user.Password))
             {
-                loginSuccess(sender, e);
+                Debug.WriteLine("Login successful");
+                AuthSessionHelper.ActiveSesion(user.Id.ToString(), user.Role);
+                loginSuccess(sender, user, e);
             }
             else
             {
@@ -52,12 +68,20 @@ namespace AD_CW_1.Forms
             }
         }
 
-        private void loginSuccess(object sender, EventArgs e)
+        private void loginSuccess(object sender, UserModel user, EventArgs e )
         {
-            MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DashboardPage dashboardPage = new DashboardPage();
-            dashboardPage.Show();
-            this.Hide();
+            if (user.Role == "admin")
+            {
+
+                AdminDashboardPage dashboardPage = new AdminDashboardPage();
+                dashboardPage.Show();
+            }
+            else
+            {
+                CustomerDashboardPage dashboardPage = new CustomerDashboardPage(user);
+                dashboardPage.Show();
+            }
+                this.Hide();
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
@@ -76,6 +100,12 @@ namespace AD_CW_1.Forms
                 e.SuppressKeyPress = true;
                 login(sender, e);
             }
+        }
+
+        private void createAccount_Click(object sender, EventArgs e)
+        {
+            RegistrationPage registrationPage = new RegistrationPage();
+            registrationPage.Show();
         }
     }
 }

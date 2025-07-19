@@ -26,5 +26,9 @@ namespace AD_CW_1.Properties
                 return defaultInstance;
             }
         }
+
+        public string UserId { get; internal set; }
+        public bool IsLoggedIn { get; internal set; }
+        public string Role { get; internal set; }
     }
 }

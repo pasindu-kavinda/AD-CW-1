@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AD_CW_1.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace AD_CW_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.LoginPage());
+            //Application.Run(new Forms.CustomerDashboardPage(7));
+            if (AuthSessionHelper.IsActive()) {
+                Application.Run(new Forms.AdminDashboardPage());
+            }
+            else { 
+                Application.Run(new Forms.LoginPage());
+            }
         }
     }
 }

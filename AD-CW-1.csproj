@@ -36,8 +36,35 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=8.0.8.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.8.0.8\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.8.0.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>packages\FluentValidation.10.3.6\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.30.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.30.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -63,15 +90,31 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.3.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -95,6 +138,10 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -116,18 +163,146 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Interface\IAssistantService.cs" />
+    <Compile Include="Business\Interface\IDashboardService.cs" />
+    <Compile Include="Business\Interface\IDriverService.cs" />
+    <Compile Include="Business\Interface\IJobProductService.cs" />
+    <Compile Include="Business\Interface\IJobService.cs" />
+    <Compile Include="Business\Interface\ILoadService.cs" />
+    <Compile Include="Business\Interface\IProductService.cs" />
+    <Compile Include="Business\Interface\IReportService.cs" />
+    <Compile Include="Business\Interface\ITransportUnitService.cs" />
+    <Compile Include="Business\Interface\ITruckService.cs" />
+    <Compile Include="Business\Interface\ICustomerService.cs" />
+    <Compile Include="Business\Interface\IUserService.cs" />
+    <Compile Include="Business\Services\AssistantService.cs" />
+    <Compile Include="Business\Services\CustomerService.cs" />
+    <Compile Include="Business\Services\DashboardService.cs" />
+    <Compile Include="Business\Services\DriverService.cs" />
+    <Compile Include="Business\Services\JobProductService.cs" />
+    <Compile Include="Business\Services\JobService.cs" />
+    <Compile Include="Business\Services\LoadService.cs" />
+    <Compile Include="Business\Services\ProductService.cs" />
+    <Compile Include="Business\Services\ReportService.cs" />
+    <Compile Include="Business\Services\TransportUnitService.cs" />
+    <Compile Include="Business\Services\TruckService.cs" />
+    <Compile Include="Business\Services\UserService.cs" />
     <Compile Include="Database\DatabaseConnection.cs" />
-    <Compile Include="Forms\Customer\CustomerCreateModal.cs">
+    <Compile Include="Constants\Enums.cs" />
+    <Compile Include="Env.cs" />
+    <Compile Include="Forms\Admin\AssistantUpdateModal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Customer\CustomerCreateModal.Designer.cs">
+    <Compile Include="Forms\Admin\AssistantUpdateModal.Designer.cs">
+      <DependentUpon>AssistantUpdateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\ContainerCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\ContainerCreateModal.Designer.cs">
+      <DependentUpon>ContainerCreateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\AssistantCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AssistantCreateModal.Designer.cs">
+      <DependentUpon>AssistantCreateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\DriverUpdateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\DriverUpdateModal.Designer.cs">
+      <DependentUpon>DriverUpdateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\ManageJobModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\ManageJobModal.Designer.cs">
+      <DependentUpon>ManageJobModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\ProductUpdateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\ProductUpdateModal.Designer.cs">
+      <DependentUpon>ProductUpdateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\ProductCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\ProductCreateModal.Designer.cs">
+      <DependentUpon>ProductCreateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TransportUnitUpdateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TransportUnitUpdateModal.Designer.cs">
+      <DependentUpon>TransportUnitUpdateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TruckUpdateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TruckUpdateModal.Designer.cs">
+      <DependentUpon>TruckUpdateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TruckCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TruckCreateModal.Designer.cs">
+      <DependentUpon>TruckCreateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\DriverCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\DriverCreateModal.Designer.cs">
+      <DependentUpon>DriverCreateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\TransportUnitCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\TransportUnitCreateModal.Designer.cs">
+      <DependentUpon>TransportUnitCreateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\CustomerUpdateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\CustomerUpdateModal.Designer.cs">
+      <DependentUpon>CustomerUpdateModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerDashboardPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerDashboardPage.Designer.cs">
+      <DependentUpon>CustomerDashboardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\CustomerCreateModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\CustomerCreateModal.Designer.cs">
       <DependentUpon>CustomerCreateModal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DashboardPage.cs">
+    <Compile Include="Forms\Admin\AdminDashboardPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DashboardPage.Designer.cs">
-      <DependentUpon>DashboardPage.cs</DependentUpon>
+    <Compile Include="Forms\Admin\AdminDashboardPage.Designer.cs">
+      <DependentUpon>AdminDashboardPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\JobSummeryModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\JobSummeryModal.Designer.cs">
+      <DependentUpon>JobSummeryModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\TransferRequestModal .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\TransferRequestModal .Designer.cs">
+      <DependentUpon>TransferRequestModal .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistrationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistrationPage.Designer.cs">
+      <DependentUpon>RegistrationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginPage.cs">
       <SubType>Form</SubType>
@@ -135,15 +310,115 @@
     <Compile Include="Forms\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Helpers\AuthSessionHelper.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\PasswordHelper.cs" />
+    <Compile Include="Models\AssistantModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\Dashboard\DashboardMetricsModel.cs" />
+    <Compile Include="Models\Dashboard\MonthlyJobsModel.cs" />
+    <Compile Include="Models\Dashboard\MonthlyTransportUnitsModel.cs" />
+    <Compile Include="Models\Dashboard\SalesPersonPerformanceModel.cs" />
+    <Compile Include="Models\DriverModel.cs" />
+    <Compile Include="Models\JobProductModel.cs" />
+    <Compile Include="Models\JobModel.cs" />
+    <Compile Include="Models\JobLogModel.cs" />
+    <Compile Include="Models\LoadModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\Reports\CustomerActivityReportModel.cs" />
+    <Compile Include="Models\Reports\DriverPerformanceReportModel.cs" />
+    <Compile Include="Models\Reports\JobSummaryReportModel.cs" />
+    <Compile Include="Models\Reports\RevenueAnalysisReportModel.cs" />
+    <Compile Include="Models\Reports\TransportUnitUtilizationReportModel.cs" />
+    <Compile Include="Models\TransportUnitModel.cs" />
+    <Compile Include="Models\TruckModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\CustomerRepository.cs" />
-    <EmbeddedResource Include="Forms\Customer\CustomerCreateModal.resx">
+    <Compile Include="Repositories\Interface\IAssistantRepository.cs" />
+    <Compile Include="Repositories\Interface\IDriverRepository.cs" />
+    <Compile Include="Repositories\Interface\IJobProductRepository.cs" />
+    <Compile Include="Repositories\Interface\IJobRepository.cs" />
+    <Compile Include="Repositories\Interface\ILoadRepository.cs" />
+    <Compile Include="Repositories\Interface\IProductRepository.cs" />
+    <Compile Include="Repositories\Interface\ITransportUnitRepository.cs" />
+    <Compile Include="Repositories\Interface\ITruckRepository.cs" />
+    <Compile Include="Repositories\Interface\ICustomerRepository.cs" />
+    <Compile Include="Repositories\Interface\IUserRepository.cs" />
+    <Compile Include="Repositories\Services\AssistantRepository.cs" />
+    <Compile Include="Repositories\Services\DriverRepository.cs" />
+    <Compile Include="Repositories\Services\JobProductRepository.cs" />
+    <Compile Include="Repositories\Services\JobRepository.cs" />
+    <Compile Include="Repositories\Services\LoadRepository.cs" />
+    <Compile Include="Repositories\Services\ProductRepository.cs" />
+    <Compile Include="Repositories\Services\TransportUnitRepository.cs" />
+    <Compile Include="Repositories\Services\TruckRepository.cs" />
+    <Compile Include="Repositories\Services\CustomerRepository.cs" />
+    <Compile Include="Repositories\Services\UserRepository.cs" />
+    <Compile Include="Validators\AssistantValidator.cs" />
+    <Compile Include="Validators\DriverValidator.cs" />
+    <Compile Include="Validators\JobProductValidator.cs" />
+    <Compile Include="Validators\LoadValidator.cs" />
+    <Compile Include="Validators\TruckValidator.cs" />
+    <Compile Include="Validators\JobValidator.cs" />
+    <Compile Include="Validators\ProductValidator.cs" />
+    <Compile Include="Validators\TransportUnitValidator.cs" />
+    <EmbeddedResource Include="Forms\Admin\AssistantUpdateModal.resx">
+      <DependentUpon>AssistantUpdateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\ContainerCreateModal.resx">
+      <DependentUpon>ContainerCreateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\AssistantCreateModal.resx">
+      <DependentUpon>AssistantCreateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\DriverUpdateModal.resx">
+      <DependentUpon>DriverUpdateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\ManageJobModal.resx">
+      <DependentUpon>ManageJobModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\ProductUpdateModal.resx">
+      <DependentUpon>ProductUpdateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\ProductCreateModal.resx">
+      <DependentUpon>ProductCreateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TransportUnitUpdateModal.resx">
+      <DependentUpon>TransportUnitUpdateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TruckUpdateModal.resx">
+      <DependentUpon>TruckUpdateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TruckCreateModal.resx">
+      <DependentUpon>TruckCreateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\DriverCreateModal.resx">
+      <DependentUpon>DriverCreateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\TransportUnitCreateModal.resx">
+      <DependentUpon>TransportUnitCreateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\CustomerUpdateModal.resx">
+      <DependentUpon>CustomerUpdateModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerDashboardPage.resx">
+      <DependentUpon>CustomerDashboardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\CustomerCreateModal.resx">
       <DependentUpon>CustomerCreateModal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardPage.resx">
-      <DependentUpon>DashboardPage.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin\AdminDashboardPage.resx">
+      <DependentUpon>AdminDashboardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\JobSummeryModal.resx">
+      <DependentUpon>JobSummeryModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\TransferRequestModal .resx">
+      <DependentUpon>TransferRequestModal .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistrationPage.resx">
+      <DependentUpon>RegistrationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -157,6 +432,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Env.sample.cs" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
